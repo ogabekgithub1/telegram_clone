@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telegram</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e7b8e12aee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+    <div class="hammasi">
+        <div class="profilim" id="profilim">
+            <div class="profilim-content">
+                <div class="profilim-header">
+                    <img src="./img/me.jpg" alt="img">
+                    <span>Mengniyozov Og'abek</span>
+                </div>
+                <div class="profile-center">
+                    <ul class="profile-control">
+                        <li>
+                            <i class="fas fa-user-friends"></i>
+                            <span>New group</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-bullhorn"></i>
+                            <span>New Channel</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-user"></i>
+                            <span>Contact</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Calls</span>
+                        </li>
+                        <li class="open-settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </li>
+                        <li>
+                            <i class="far fa-moon"></i>
+                            <span>Night settings</span>
+                            <i class="fas fa-toggle-off"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-menu" id="column-left">
+            <div class="chat-header">
+                <i class="fas fa-bars tugma" aria-hidden="true"></i>
+                <input type="text" placeholder="Search" class="chat-search" id="search">
+            </div>
+            <div class="chat-content">
+              <!-- <ul class="chat-content-group">
+                   <li class="chat-content-group-list">
+                        <div class="chat-content-group-list-menu">
+                            <img src="./img/profil.png" alt="img" class="chat-content-group-list-profile">
+                            <div class="chat-content-group-list-name">Uroljon</div>
+                        </div>
+                        <div class="chat-content-group-list-end">
+                            <div class="chat-content-group-list-end-time">10:19</div>
+                        </div>
+                   </li>
+                </ul>-->
+            </div>
+        </div>
+
+        <div class="message-menu" id="center-column">
+            <div class="message-menu-header">
+                <div class="message-menu-info">
+                    <span class="message-menu-user">Name</span>
+                    <span class="message-menu-online">online</span>
+                </div>
+                <div class="message-menu-icons">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <i class="far fa-window-maximize active rightBtn" aria-hidden="true"></i>
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    <!--Dropdown bor-->
+                    <i class="fas fa-ellipsis-v dropdown" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <ul class="message-menu-chat">
+                <!--<li class="message-menu-chat-content-left" id="message1" aria-hidden="true">
+                    <img src="./img/profil.png" alt="img" class="message-menu-chat-content-img">
+                    <span class="message-menu-chat-content">
+                        <span class="message-menu-chat-content-text">Salom</span>
+                        <span class="message-menu-chat-content-time">11:01</span>
+                    </span>
+                </li>
+                <li class="message-menu-chat-content-right" id="message2" aria-hidden="true">
+                    <span class="message-menu-chat-content-send">
+                        <span class="message-menu-chat-content-text">alik</span>
+                        <span class="message-menu-chat-content-time">11:01</span>
+                    </span>
+                    <img src="./img/profil.png" alt="img" class="message-menu-chat-content-img-right">
+                </li>-->
+            </ul>
+
+            <div class="message-menu-input">
+                <i class="fas fa-file-upload" aria-hidden="true"></i>
+                <input type="text" placeholder="Write a message..." class="message-menu-input-go">
+                <i class="far fa-laugh-beam" aria-hidden="true"></i>
+                <button type="submit" class="send-button"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+        <div class="information-menu" id="right-column">
+            <div class="information-header">
+                <img src="./img/profil.png" alt="img" class="information-menu-profil">
+                <div class="information-header-content">
+                    <span class="information-menu-user-name">Name</span><br>
+                    <span class="information-menu-user-online">online</span>
+                </div>
+            </div>
+            <div class="information-center">
+                <i class="fas fa-info-circle"></i>
+                <div class="information-center-text">
+                    <span class="information-center-big-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, ut!</span>
+                    <span class="information-center-small-text">Bio</span>
+                    <span class="information-center-big-text">+998-99-458-09-47</span>
+                    <span class="information-center-small-text">Mobile</span>
+                    <span class="information-center-big-text">fulfil_1</span>
+                    <span class="information-center-small-text">Username</span>
+                </div>
+            </div>
+            <div class="information-footer">
+                <ul class="information-footer-group">
+
+                    <li>
+                        <i class="fas fa-image"></i>
+                        <span class="information-footer-group-element">
+                            <span class="information-footer-group-number" id="media">11</span>
+                            <span class="information-footer-group-text" data-target="media">media</span>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-file"></i>
+                        <span class="information-footer-group-element">
+                            <span class="information-footer-group-number" id="file">11</span>
+                            <span class="information-footer-group-text" data-target="file">File</span>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-microphone"></i>
+                        <span class="information-footer-group-element">
+                            <span class="information-footer-group-number" id="voice">11</span>
+                            <span class="information-footer-group-text" data-target="voice">Voice</span>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-user"></i>
+                        <span class="information-footer-group-element">
+                            <span class="information-footer-group-number" id="group">11</span>
+                            <span class="information-footer-group-text" data-target="group">Groups in common</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
