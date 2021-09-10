@@ -9,10 +9,24 @@ profilElem.addEventListener("mouseleave",function (MouseLeave) {
 });
 
 let rightBtn = document.querySelector(".rightBtn");
+
 rightBtn.addEventListener("click",function () {
     document.querySelector(".information-menu").setAttribute("style","display:none;")
-
 });
+
+let dropdownElem = document.querySelector("#dropdownBtn");
+dropdownElem.addEventListener("click",function () {
+    document.querySelector(".dropdown-menu").setAttribute("style","display:block;")
+});
+document.querySelector(".dropdown-menu").addEventListener("mouseleave",function () {
+    document.querySelector(".dropdown-menu").setAttribute("style","display:none;")
+})
+
+//rightBtn.addEventListener("click",function () {
+//     document.querySelector(".information-menu").setAttribute("style","display:none;")
+//
+// });
+
 
 
 
@@ -27,6 +41,8 @@ let DATA = {
             last_name: "Ibragimov",
             avatar: "./img/azizbek.jpg",
             bio: "Sabr ozroq.",
+            number: "+998 91 970 44 55",
+            username:"@azizbek",
             groups_common: 4,
             shared_links: 10,
             shared_photos: 40,
@@ -36,14 +52,14 @@ let DATA = {
                 {
                     id: 1,
                     is_from_me: false,
-                    text: "Assalomu alaykum, Yaxshimisiz",
-                    time: new Date(),
+                    text: "Assalomu alaykum, Yaxshimisiz 1",
+                    time: "07:10",
                 },
                 {
                     id: 2,
                     is_from_me: true,
                     text: "lorem ipsum dolor sit amet...",
-                    time: new Date(),
+                    time: "07:20",
                 },
             ],
         },
@@ -53,6 +69,8 @@ let DATA = {
             last_name: "",
             avatar: "./img/salohiddin.jpg",
             bio: "Omad",
+            number: "+998 91 970 44 66",
+            username:"@salohiddin",
             groups_common: 4,
             shared_links: 15,
             shared_photos: 20,
@@ -62,14 +80,14 @@ let DATA = {
                 {
                     id: 1,
                     is_from_me: false,
-                    text: "lorem ipsum dolor sit",
-                    time: new Date(),
+                    text: "Assalomu alaykum, Yaxshimisiz 2",
+                    time: "20:02",
                 },
                 {
                     id: 2,
                     is_from_me: true,
                     text: "lorem ipsum dolor sit amet...",
-                    time: new Date(),
+                    time: "20:23",
                 },
             ],
         },
@@ -79,6 +97,8 @@ let DATA = {
             last_name: "Girl",
             avatar: "./img/lazy.jpg",
             bio: "🌕🌖🌗🌘🌑🌒🌓🌔🌕",
+            number: "+998 91 970 77 77",
+            username:"@TerDU_204",
             groups_common: 4,
             shared_links: 12,
             shared_photos: 10,
@@ -88,14 +108,14 @@ let DATA = {
                 {
                     id: 1,
                     is_from_me: false,
-                    text: "lorem ipsum dolor sit amet...3",
-                    time: new Date(),
+                    text: "Assalomu alaykum, Yaxshimisiz 3",
+                    time: "22:10",
                 },
                 {
                     id: 2,
                     is_from_me: true,
                     text: "lorem ipsum dolor sit amet...",
-                    time: new Date(),
+                    time: "22:11",
                 },
             ],
         },
@@ -105,6 +125,8 @@ let DATA = {
             last_name: "",
             avatar: "./img/anonimis.jpg",
             bio: "I'm anywhere",
+            number: "+998 91 970 56 55",
+            username:"@QWERT",
             groups_common: 4,
             shared_links: 15,
             shared_photos: 20,
@@ -114,14 +136,14 @@ let DATA = {
                 {
                     id: 1,
                     is_from_me: false,
-                    text: "lorem ipsum ",
-                    time: new Date(),
+                    text: "Assalomu alaykum, Yaxshimisiz 4",
+                    time: "00:23",
                 },
                 {
                     id: 2,
                     is_from_me: true,
                     text: "lorem ipsum dolor sit amet...",
-                    time: new Date(),
+                    time: "08:01",
                 },
             ],
         },
@@ -130,7 +152,9 @@ let DATA = {
             first_name: "Botir",
             last_name: "Omondavlatov",
             avatar: "./img/botir.jpg",
-            bio: "I'm anywhere",
+            bio: "Beminnat ollohimga behisob shukur",
+            number: "+998 91 970 99 55",
+            username:"@qwerkjhgf",
             groups_common: 4,
             shared_links: 15,
             shared_photos: 20,
@@ -141,13 +165,13 @@ let DATA = {
                     id: 1,
                     is_from_me: false,
                     text: "lorem ipsum dolor sit amet...5",
-                    time: new Date(),
+                    time: "20:61",
                 },
                 {
                     id: 2,
                     is_from_me: true,
                     text: "lorem ipsum dolor sit amet...",
-                    time: new Date(),
+                    time: "20:45",
                 },
             ],
         },
@@ -191,7 +215,7 @@ function htmlElemnts(array) {
         div3Elem.className += "chat-content-group-list-end";
         let timeElem = document.createElement("div");
         timeElem.className += "chat-content-group-list-end-time";
-        timeElem.textContent = "12:00";
+        timeElem.innerHTML = "22:00";
         let iconElem = document.createElement("i");
         iconElem.className += "fas fa-check";
         nameElem.textContent = element.first_name + " " + element.last_name;
@@ -201,7 +225,7 @@ function htmlElemnts(array) {
         chatElem.appendChild(ulElem);
         ulElem.appendChild(liElem);
         liElem.appendChild(div1Elem);
-        liElem.appendChild(div2Elem)
+        liElem.appendChild(div2Elem);
         liElem.appendChild(div3Elem);
         div1Elem.appendChild(avatarElem);
         div2Elem.appendChild(nameElem);
@@ -245,7 +269,15 @@ let nameBio = document.querySelector(".message-menu-user");
 let nameBio2 = document.querySelector(".information-menu-user-name");
 let activityElem = document.querySelector(".information-menu-user-online");
 let activityElem2 = document.querySelector(".message-menu-online");
-let biography = document.querySelector(".information-center-big-text");
+let biography = document.querySelector(".biografiya");
+let mobile = document.querySelector(".mobile");
+let userName = document.querySelector(".username");
+let media = document.querySelector("#media");
+let file = document.querySelector("#file");
+let voice = document.querySelector("#voice");
+let group = document.querySelector("#group");
+
+let imgElem = document.querySelector(".information-menu-profil");
 chats.forEach(function (chat) {
     chat.addEventListener("click", function () {
         userId = chat.getAttribute("user_id");
@@ -253,11 +285,20 @@ chats.forEach(function (chat) {
         userId = userId - 0;
 
         let user = DATA.users[userId];
+        
+
         nameBio.innerHTML = user.first_name + " " + user.last_name;
         nameBio2.innerHTML = user.first_name + " " + user.last_name;
         activityElem.innerHTML = user.activity;
         activityElem2.innerHTML = user.activity;
         biography.innerHTML = user.bio;
+        mobile.innerHTML = user.number;
+        userName.innerHTML = user.username;
+        media.innerHTML = user.shared_photos;
+        file.innerHTML = user.shared_links;
+        voice.innerHTML = user.shared_voice;
+        group.innerHTML = user.groups_common;
+        imgElem.src = user.avatar;
         renderMessage(userId);
     });
 });
@@ -276,7 +317,7 @@ function renderMessage(userId) {
                     }">
                   <span class="${messages.is_from_me ? "message-menu-chat-content-send":"message-menu-chat-content"}">
                   <span class="message-menu-chat-content-text">${messages.text}</span>
-                  <span class="message-menu-chat-content-time">11:01</span>
+                  <span class="message-menu-chat-content-time">${messages.time}</span>
                   </span>
           </li>`;
                 });
