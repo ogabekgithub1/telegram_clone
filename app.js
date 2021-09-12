@@ -20,7 +20,7 @@ dropdownElem.addEventListener("click",function () {
 });
 document.querySelector(".dropdown-menu").addEventListener("mouseleave",function () {
     document.querySelector(".dropdown-menu").setAttribute("style","display:none;")
-})
+});
 
 //rightBtn.addEventListener("click",function () {
 //     document.querySelector(".information-menu").setAttribute("style","display:none;")
@@ -254,7 +254,7 @@ sendBtn.addEventListener("click", () => {
                     id: chatItem.messages[chatItem.messages.length - 1].id + 1,
                     is_from_me: true,
                     text: newMessage,
-                    time: new Date(),
+                    time: `${new Date().getHours()}  :   ${new Date().getMinutes()}`,
                 });
             }
         });
